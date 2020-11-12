@@ -4,7 +4,7 @@ import {Injectable} from '@angular/core'
 export class HeroesService{
 
 
-    private heroes:any[]=
+    private heroes:Heroe[]=
         [
             {
               nombre: "Aquaman",
@@ -56,18 +56,20 @@ export class HeroesService{
               casa: "Marvel"
             }
           ];
-    
-
-
-    getHeroes(){
-        return this.heroes
-    }
 
     constructor(){
         console.log("Listo para utilizar servicio");
     }
+
+    getHeroes():Heroe[]{
+      return this.heroes
+  }
 }
 
-interface Heroe{
-        
-}
+export interface Heroe{
+  nombre: string;
+  bio: string;
+  img: string;
+  aparicion: string;
+  casa: string;
+};

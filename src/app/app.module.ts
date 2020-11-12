@@ -1,14 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+//rutas
+import { APP_ROUTING } from './app.routes'
+
+//componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroesService} from './servicios/heroes.services'; 
-import { from } from 'rxjs';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,7 @@ import { from } from 'rxjs';
     HeroesComponent  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    APP_ROUTING
   ],
   providers: [
     HeroesService
