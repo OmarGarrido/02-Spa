@@ -64,6 +64,28 @@ export class HeroesService{
     getHeroes():Heroe[]{
       return this.heroes
   }
+
+  //pagina heroe: creamos un metodo para obtener el heroe especifico de nuestro arreglo
+  
+  getHeroe(idx:number){
+    return this.heroes[idx];
+  }
+
+  //esta funcion regresa todos los datos del heroe que buscamos si este se encuentra
+  BuscarHeroe(termino:string){
+    let heroeAux:Heroe[]=[];
+    termino=termino.toLowerCase();
+    for(let heroe of this.heroes){
+      let nombre=heroe.nombre.toLowerCase();
+      if(nombre.indexOf(termino)>=0){
+         heroeAux.push(heroe)
+      }
+    }
+
+    return console.log(heroeAux);
+    ;
+  }
+
 }
 
 export interface Heroe{
