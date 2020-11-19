@@ -22,7 +22,6 @@ export class NavbarComponent {
     console.log(termino);
     this._router.navigate(['buscar',termino]);
     /* return this.heroes */
-
   }
 
   /* verHeroe(idx:number){

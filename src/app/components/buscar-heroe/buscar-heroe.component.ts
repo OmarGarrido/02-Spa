@@ -21,12 +21,12 @@ export class BuscarHeroeComponent implements OnInit {
     this._ActivatedRoute.params.subscribe(params=>{
       this.heroes=this._heroServices.BuscarHeroe(params['termino']);
       console.log(this.heroes);
-      
+      _heroServices.setAux(this.heroes);
     })
   }
 
   verHeroe(idx:number){
-    this._router.navigate(['heroe',idx])//ruta y variable 
+    this._router.navigate(['heroesAux',idx])//ruta y variable 
     }
 
   ngOnInit(): void {

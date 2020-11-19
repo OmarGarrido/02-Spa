@@ -16,7 +16,7 @@ export class HeroeComponent {
 
   constructor(private _activatedRouter:ActivatedRoute,
               private _heroesServices:HeroesService
-  ) 
+  )
   {   
 
     this._activatedRouter.params.subscribe(parametros=>{

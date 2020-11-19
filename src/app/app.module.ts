@@ -12,7 +12,8 @@ import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroesService} from './servicios/heroes.services';
 import { HeroeComponent } from './components/heroe/heroe.component';
-import { BuscarHeroeComponent } from './components/buscar-heroe/buscar-heroe.component'; 
+import { BuscarHeroeComponent } from './components/buscar-heroe/buscar-heroe.component';
+import { HeroeAuxComponent } from './components/heroe-aux/heroe-aux.component'; 
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BuscarHeroeComponent } from './components/buscar-heroe/buscar-heroe.com
     AboutComponent,
     HeroesComponent,
     HeroeComponent,
-    BuscarHeroeComponent  ],
+    BuscarHeroeComponent,
+    HeroeAuxComponent  ],
   imports: [
     BrowserModule,
     APP_ROUTING
