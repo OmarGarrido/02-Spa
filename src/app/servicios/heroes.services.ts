@@ -57,8 +57,18 @@ export class HeroesService{
             }
           ];
 
+          private aux:Heroe[];
+
     constructor(){
         console.log("Listo para utilizar servicio");
+    }
+
+    getAux(idx:number){
+      return this.aux[idx];
+    }
+
+    setAux(aux:Heroe[]){
+      this.aux=aux;
     }
 
     getHeroes():Heroe[]{
@@ -81,9 +91,7 @@ export class HeroesService{
          heroeAux.push(heroe)
       }
     }
-
-    return console.log(heroeAux);
-    ;
+    return heroeAux;
   }
 
 }
